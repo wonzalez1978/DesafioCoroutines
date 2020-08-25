@@ -10,9 +10,8 @@ import java.net.URL
 
 class Repository {
 
-    var url = ("https://apod.nasa.gov/apod/image/1908/M61-HST-ESO-S1024.jpg")
-    suspend fun downloadImageFromNetwork(url: String): Bitmap? = withContext(Dispatchers.IO){
-        val result = downloadImageFromNetwork(url)
+    suspend fun downloadImageFromNetwork(url: String): Bitmap? = withContext(Dispatchers.Default){
+
         val urldisplay = url
         var bmp: Bitmap? = null
 
